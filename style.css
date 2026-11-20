@@ -45,36 +45,58 @@ footer{text-align:center;padding:14px;font-size:10px;color:#6b5a8a}
 .premium button{background:#fff;color:#ff2e7a;border:none;padding:10px 15px;border-radius:20px;font-weight:bold;cursor:pointer}
 .left {
 }
+/* ===== BOTON DEL MENU ===== */
 .btn-menu {
-  background: white;
-  border: none;
-  font-size: 28px;
-  padding: 5px 12px;
-  border-radius: 12px;
-  cursor: pointer;
   position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 100;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  width: 45px;
+  height: 45px;
+  font-size: 26px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
+/* ===== MENU LATERAL ===== */
 .menu {
-  display: none;
   position: fixed;
   top: 0;
-  left: 0;
-  background: black;
-  width: 200px;
+  left: -250px; /* escondido a la izquierda */
+  width: 230px;
   height: 100%;
+  background: #0a0a1f;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   z-index: 999;
-  padding: 20px;
+  transition: left 0.3s ease;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.5);
 }
 
+/* Cuando le picas, se abre */
 .menu.activo {
+  left: 0;
+  display: flex;
+}
+
+/* ===== LINKS DEL MENU ===== */
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  padding: 12px 20px;
   display: block;
 }
 
-.btn-menu {
-  position: relative;
-  z-index: 1000;
+.menu a:hover {
+  background: #ff5da2;
+  color: white;
+  border-radius: 8px;
 }
