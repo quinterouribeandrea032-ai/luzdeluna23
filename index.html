@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luz de Luna</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="btn-menu" onclick="abrirMenu()">☰</button>
+
+<div class="menu" id="miMenu">
+  <a href="index.html">🏠 Inicio</a>
+  <a href="karol.html">Karol G</a>
+  <a href="danny.html">Danny Ocean</a>
+  <a href="bad.html">Bad Bunny</a>
+  <a href="cornelio.html">Cornelio Vega</a>
+  <a href="frontera.html">Grupo Frontera</a>
+  <a href="formulario.html">Suscripción</a>
+  
+</div>
+  
+</header>
+<section class="banner">
+<div class="imagen portada">
+<p align="left">
+<img src="luna.PNG" width="100" height="100">
+</p>
+<h1>Bienvenido</h1>
+  <p>La música también es un lugar al que siempre puedes volver</p>
+  </div>
+</section>
+
+<main>
+<div class="premium"><div><h3>👑 LUZ DE LUNA PREMIUM - Escucha sin anuncios</h3><p>Disfruta música sin anuncios, saltos ilimitados.</p></div><button onclick="verAnuncio()">Quiero ser Premium!</button></div>
+  <h2>Seleccionado para ti</h2>
+  <div class="grid5">
+    <div class="card"><img src="imagen_7.jpg"><p>Bby WOW(Visualizer)</p><audio controls src="audio_karol.m4a"></audio></div>
+    <div class="card"><img src="imagen_2.jpg"><p>Me rehúso</p><audio controls src="audio_danny.m4a"></audio></div>
+    <div class="card"><img src="imagen_3.jpg"><p>Baile Inolvidable</p><audio controls src="audio_bad.m4a"></audio></div>
+    <div class="card"><img src="imagen_6.jpg"><p>15 besos</p><audio controls src="audio_cornelio.m4a"></audio></div>
+    <div class="card"><img src="imagen_4.jpg"><p>Que vuelvas</p><audio controls src="audio_frontera.m4a"></audio></div>
+  </div>
+  </section>
+
+<script>
+  const audios = document.querySelectorAll('audio');
+  audios.forEach(audio => {
+    audio.addEventListener('play', function() {
+      audios.forEach(otro => {
+        if (otro !== audio) {
+          otro.pause();
+        }
+      });
+    });
+  });
+</script>
+
+
+  
+
+  <h2>Artistas</h2>
+  <div class="artistas">
+    <div><a href="karol.html"><img src="imagen_7.jpg"><p>KAROL G</p></a></div>
+    <div><a href="danny.html"><img src="imagen_2.jpg"><p>Danny Ocean</p></a></div>
+    <div><a href="bad.html"><img src="imagen_3.jpg"><p>Bad Bunny</p></a></div>
+    <div><a href="cornelio.html"><img src="imagen_6.jpg"><p>Cornelio vega</p></a></div>
+    <div><a href="frontera.html"><img src="imagen_4.jpg"><p>Grupo Frontera</p></a></div>
+  </div>
+  <br>
+  
+  </footer>
+  PROYECTO POR :ANDREA QUINTERO URIBE - GRUPO 301 - 2026 CECYTE
+  </footer>
+  <div id="modalAnuncio" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:200;color:#fff;padding:20px;text-align:center"><p>📢 ANUNCIO - Tienes que verlo completo <span id="tiempoAnuncio">Quedan 15 segundos...</span></p><video id="videoAnuncio" controls style="width:95%;max-width:600px;border-radius:10px;margin-top:15px"><source src="video_zapatos.mp4"></video><br><button id="btnCerrarAnuncio" onclick="cerrarAnuncio()" style="display:none;background:#fff;color:#000;padding:12px 22px;border-radius:20px;border:none;font-weight:bold;margin-top:15px;cursor:pointer">Cerrar anuncio ❌</button></div>
+
+<div id="modalPremium" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:300;text-align:center"><div style="background:#fff;color:#000;width:85%;max-width:550px;margin:180px auto;padding:30px;border-radius:18px"><h2>¿Seguro que quieres ser Premium?</h2><p>Sin anuncios, sin interrupciones, por solo $99 al mes</p><button onclick="confirmarPremium()" style="background:#1DB954;color:#fff;border:none;padding:14px 22px;border-radius:8px;font-weight:bold;font-size:17px;cursor:pointer">Si, quiero ser Premium</button><button onclick="cerrarPremium()" style="background:#b5b5b5;color:#fff;border:none;padding:14px 22px;border-radius:8px;font-weight:bold;font-size:17px;cursor:pointer;margin-left:10px">No, despues</button></div></div>
+
+<script>
+function verAnuncio(){document.getElementById("modalAnuncio").style.display="block";let video=document.getElementById("videoAnuncio");video.play();let segundos=15;document.getElementById("btnCerrarAnuncio").style.display="none";let intervalo=setInterval(function(){segundos--;document.getElementById("tiempoAnuncio").textContent="Quedan "+segundos+" segundos...";if(segundos<=0){clearInterval(intervalo);document.getElementById("btnCerrarAnuncio").style.display="inline-block";document.getElementById("tiempoAnuncio").textContent="¡Ya puedes cerrar el anuncio!";}},1000);}
+function cerrarAnuncio(){document.getElementById("modalAnuncio").style.display="none";document.getElementById("videoAnuncio").pause();document.getElementById("modalPremium").style.display="block";}
+function cerrarPremium(){document.getElementById("modalPremium").style.display="none";}
+function confirmarPremium(){document.getElementById("modalPremium").style.display="none";alert("¡Bienvenida a Premium! 🥹✨");}
+</script>
+
+
+
+
+
+</body>
+</html>
