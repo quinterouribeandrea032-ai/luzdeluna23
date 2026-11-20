@@ -76,6 +76,13 @@ footer{text-align:center;padding:14px;font-size:10px;color:#6b5a8a}
   font-size: 20px;
   padding: 10px;
 }
+.menu {
+  display: none;
+}
+
+.menu.activo {
+  display: block;
+}
 label {
   color: white;
   font-weight: bold;
