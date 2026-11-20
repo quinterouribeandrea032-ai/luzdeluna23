@@ -61,29 +61,20 @@ footer{text-align:center;padding:14px;font-size:10px;color:#6b5a8a}
 .menu {
   display: none;
   position: fixed;
-  top: 60px;
-  left: 10px;
-  background: #fff8e7;
-  border-radius: 15px;
-  padding: 15px;
-  z-index: 99;
-}
-
-.menu a {
-  display: block;
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  padding: 10px;
-}
-.menu {
-  display: none;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 200px;
+  height: 100%;
+  z-index: 999;
+  padding: 20px;
 }
 
 .menu.activo {
   display: block;
 }
-label {
-  color: white;
-  font-weight: bold;
+
+.btn-menu {
+  position: relative;
+  z-index: 1000;
 }
