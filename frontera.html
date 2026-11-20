@@ -6,9 +6,9 @@
 <title>Luz de Luna</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<header>
- <div class="menu" id="miMenu">
+<button class="btn-menu" onclick="abrirMenu()">☰</button>
+
+<div class="menu" id="miMenu">
   <a href="index.html">🏠 Inicio</a>
   <a href="karol.html">Karol G</a>
   <a href="danny.html">Danny Ocean</a>
@@ -16,6 +16,7 @@
   <a href="cornelio.html">Cornelio Vega</a>
   <a href="frontera.html">Grupo Frontera</a>
   <a href="formulario.html">Suscripción</a>
+</div>
   
 </header>
     <table border="0">
@@ -24,3 +25,9 @@
    <center><video width="850" height="450" controls>
  <source src="frontera.mp4" type="video/mp4">
 </video>
+<script>
+function abrirMenu() {
+  document.getElementById("miMenu").classList.toggle("activo");
+}
+</script>
+</body>
