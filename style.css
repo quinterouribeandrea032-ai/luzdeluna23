@@ -1,0 +1,74 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#121212;color:#ffffff}
+
+header{background:#8a5cf5;color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;position:relative}
+.logo{font-weight:bold;font-size:20px;flex:1;text-align:center}
+.left{position:relative}
+#menu-btn{display:none}
+.ham{font-size:26px;cursor:pointer;background:#fff;color:#8a5cf5;padding:4px 10px;border-radius:8px}
+.dropdown{display:none;position:absolute;top:40px;left:0;background:#fff;border-radius:12px;box-shadow:0 4px 12px #0003;width:180px;z-index:10}
+.dropdown a{display:block;padding:10px 14px;text-decoration:none;color:#2e204a;font-size:13px}
+.dropdown a:hover{background:#f3e8ff}
+#menu-btn:checked + .ham + .dropdown{display:block}
+
+.banner{background:#2d1b5a;color:#fff;text-align:center;padding:28px 16px;background-image:linear-gradient(#2d1b5a,#4b2d8a);border-radius:0 0 18px 18px}
+.banner button{margin-top:12px;background:#8a5cf5;border:none;padding:8px 16px;border-radius:20px;color:#fff;font-weight:bold}
+
+main{padding:18px}
+h2{margin:18px 0 10px;font-size:18px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.card{background:#fff;border-radius:12px;padding:8px;text-align:center;box-shadow:0 2px 6px #0002}
+.card img{width:100%;height:90px;object-fit:cover;border-radius:8px}
+.card audio{width:100%;height:24px;margin-top:4px}
+
+.moods{display:flex;gap:8px;flex-wrap:wrap}
+.m{padding:8px 14px;border-radius:20px;font-size:12px}
+.m.claro{background:#e9d5ff} .m.morado{background:#3c1f6e;color:#fff}
+
+.artistas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.artistas img{width:70px;height:70px;border-radius:50%;object-fit:cover;border:3px solid #e9d5ff}
+.artistas p{font-size:10px;text-align:center;margin-top:4px}
+
+footer{text-align:center;padding:14px;font-size:10px;color:#6b5a8a}
+
+@media(max-width:700px){
+  .grid5{grid-template-columns:1fr}
+  .logo{font-size:16px}
+}
+
+
+.artistas a {
+  text-decoration: none;
+  color: #fff;
+}
+.premium{background:linear-gradient(90deg,#ff5e8a,#a855f7);margin:15px;padding:18px;border-radius:12px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.premium button{background:#fff;color:#ff2e7a;border:none;padding:10px 15px;border-radius:20px;font-weight:bold;cursor:pointer}
+.left {
+}
+.menu-desplegable summary {
+  background: #ff5e8a;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.menu-desplegable nav {
+  display: flex;
+  flex-direction: column;
+  background: #ff5e8a;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.menu-desplegable nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+    
