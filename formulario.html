@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario Validado - 3er Parcial</title>
+<link rel="stylesheet" href="styless.css">
+</head>
+<body>
+<button class="btn-menu" onclick="abrirMenu()">☰</button>
+
+<div class="menu" id="miMenu">
+  <a href="index.html">🏠 Inicio</a>
+  <a href="karol.html">Karol G</a>
+  <a href="danny.html">Danny Ocean</a>
+  <a href="bad.html">Bad Bunny</a>
+  <a href="cornelio.html">Cornelio Vega</a>
+  <a href="frontera.html">Grupo Frontera</a>
+  <a href="formulario.html">Suscripción</a>
+  
+</div>
+
+
+<div class="formulario">
+  <h2>Formulario de Suscripción</h2>
+
+  <label>Nombre:</label>
+  <input type="text" id="nombre" placeholder="Inserte su nombre aquí" oninput="validarNombre()">
+  <span class="error" id="errorNombre"></span>
+
+  <label>Apellido Paterno:</label>
+  <input type="text" id="paterno" placeholder="Inserte su apellido paterno aquí" oninput="validarPaterno()">
+  <span class="error" id="errorPaterno"></span>
+
+  <label>Apellido Materno:</label>
+  <input type="text" id="materno" placeholder="Inserte su apellido materno aquí" oninput="validarMaterno()">
+  <span class="error" id="errorMaterno"></span>
+
+  <label>Edad:</label>
+  <input type="text" id="edad" placeholder="Inserte su edad aquí" maxlength="3" inputmode="numeric" oninput="validarEdad()">
+  <span class="error" id="errorEdad"></span>
+  
+<label>Fecha de Nacimiento:</label>
+<div style="display: flex; gap: 8px; margin-bottom: 20px; width: 100%;">
+  <select id="dia" onchange="validarFecha()" style="flex:1;">
+    <option value="">Día</option>
+  </select>
+  <select id="mes" onchange="validarFecha()" style="flex:1;">
+    <option value="">Mes</option>
+  </select>
+  <select id="anio" onchange="validarFecha()" style="flex:1;">
+    <option value="">Año</option>
+  </select>
+</div>
+<span id="errorFecha"></span>
+
+<label>Tarjeta de Crédito:</label>
+<input type="text" id="tarjeta" placeholder="Inserte su tarjeta aquí" oninput="validarTarjeta()">
+<span id="errorTarjeta"></span>
+
+
+
+   <label>Email:</label>
+  <input type="text" id="email" placeholder="Inserte su correo aquí" oninput="validarEmail()">
+  <span class="error" id="errorEmail"></span>
+
+  <button onclick="validarTodo()">Suscribir</button>
+<p id="resultado"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
