@@ -147,3 +147,58 @@ label {
   color: red;
   font-weight: bold;
 }
+/* FORMULARIO RESPONSIVO */
+
+.subscription-container {
+
+    width: 95%;
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+}
+
+.subscription-container input,
+
+.subscription-container button {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    font-size: 17px;
+
+    margin-bottom: 15px;
+
+}
+
+@media (max-width: 600px) {
+
+    .subscription-container {
+
+        width: 96%;
+
+        max-width: none;
+
+        padding: 20px 15px;
+
+        margin: 10px auto;
+
+    }
+
+    .subscription-container input,
+
+    .subscription-container button {
+
+        font-size: 18px;}
+
+}
+
+        padding: 16px;
